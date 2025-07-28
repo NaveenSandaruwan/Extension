@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Floating Note",
+  "description": "Take floating notes on any webpage",
+  "version": "1.0",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {
+    "default_icon": "school.png",
+    "default_title": "Floating Note"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "icons": {
+    "48": "school.png"
+  }
+}

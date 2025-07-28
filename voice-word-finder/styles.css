@@ -1,0 +1,30 @@
+#voice-robot {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#voice-robot:hover {
+  transform: scale(1.1);
+}
+
+#voice-robot.listening {
+  box-shadow: 0 0 10px 4px red;
+  border-radius: 50%;
+}
+
+.voice-highlight {
+  background-color: yellow;
+  border-radius: 4px;
+  padding: 0 2px;
+}
+
+.voice-highlight.active {
+  background-color: orange;
+  font-weight: bold;
+}

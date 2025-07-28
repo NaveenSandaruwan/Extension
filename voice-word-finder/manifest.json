@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Voice Word Finder",
+  "description": "Find and highlight words using your voice.",
+  "version": "1.0",
+  "permissions": ["scripting", "activeTab"],
+  "web_accessible_resources": [
+    {
+      "resources": ["robot.png"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "icons": {
+    "48": "robot.png"
+  },
+  "action": {
+    "default_icon": "robot.png",
+    "default_title": "Voice Word Finder"
+  }
+}
